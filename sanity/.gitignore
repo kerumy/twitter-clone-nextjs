@@ -2,7 +2,7 @@
 
 # Dependencies
 /node_modules/*
-!/node_modules/sanity/lib/exports/cli
+!/node_modules/@sanity
 /.pnp
 .pnp.js
 
