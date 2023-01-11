@@ -1,14 +1,17 @@
-import {defineConfig} from 'sanity'
+import {defineConfig} from 'sanity/lib/exports/index'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
+
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!
 
 export default defineConfig({
   name: 'default',
   title: 'twitter-clone',
 
-  projectId: 'gd69l0zm',
-  dataset: 'production',
+  projectId,
+  dataset,
 
   plugins: [deskTool(), visionTool()],
 
